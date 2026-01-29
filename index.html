@@ -34,7 +34,7 @@
   <header class="header">
     <div class="container header__container">
 
-      <a href="index.html" class="logo header__logo">
+      <a href="/" class="logo header__logo">
         <img src="./assets/icons/Vector.png" alt="Snowflake logo" class="logo__image" />
         <span class="logo__text">THE GIFTS</span>
       </a>
@@ -73,8 +73,7 @@
 
     <!-- ABOUT -->
     <section class="about" id="about">
-      <div class="container about__container">
-
+      <div class="about__container container">
         <div class="about__content">
           <p class="about__subtitle">About</p>
           <h2 class="about__title">UNLEASH YOUR INNER SUPERHERO!</h2>
@@ -87,7 +86,6 @@
         <div class="about__image-wrapper">
           <img src="./assets/images/santa.png" alt="Santa Claus" class="about__image" />
         </div>
-
       </div>
     </section>
 
@@ -98,7 +96,7 @@
         <p class="slider__subtitle">Become Happier!</p>
         <h2 class="slider__title">IN THE NEW 2025</h2>
 
-        <div class="slider__track">
+        <div class="slider__content">
 
           <div class="slider__item slider__item--text">LIVE</div>
           <div class="slider__item">
@@ -123,8 +121,15 @@
         </div>
 
         <div class="slider__controls">
-          <button class="slider__button slider__button--prev" aria-label="Previous slide"></button>
-          <button class="slider__button slider__button--next" aria-label="Next slide"></button>
+          <button class="slider__button slider__button--prev" aria-label="Previous slide"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></button>
+          <button class="slider__button slider__button--next" aria-label="Next slide"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></button>
         </div>
 
       </div>
@@ -140,35 +145,47 @@
         <div class="gifts__list">
 
           <article class="gift-card">
-            <img src="./assets/images/gift-for-work.png" alt="" class="gift-card__image" />
-            <div class="gift-card__content">
-              <span class="gift-card__category gift-card__category--purple">FOR WORK</span>
-              <h3 class="gift-card__title">CONSOLE.LOG GURU</h3>
-            </div>
+            <button class="gift-card__button" type="button" aria-haspopup="dialog" aria-controls="gift-modal"
+              data-gift="console-log-guru">
+              <img src="./assets/images/gift-for-work.png" alt="Gift for work: Console.log Guru" class="gift-card__image" />
+              <div class="gift-card__content">
+                <span class="gift-card__category gift-card__category--purple">FOR WORK</span>
+                <h3 class="gift-card__title">CONSOLE.LOG GURU</h3>
+              </div>
+            </button>
           </article>
 
           <article class="gift-card">
-            <img src="./assets/images/gift-for-health.png" alt="" class="gift-card__image" />
-            <div class="gift-card__content">
-              <span class="gift-card__category gift-card__category--green">FOR HEALTH</span>
-              <h3 class="gift-card__title">HYDRATION BOT</h3>
-            </div>
+            <button class="gift-card__button" type="button" aria-haspopup="dialog" aria-controls="gift-modal"
+              data-gift="hydration-bot">
+              <img src="./assets/images/gift-for-health.png" alt="Gift for health: Hydration Bot" class="gift-card__image" />
+              <div class="gift-card__content">
+                <span class="gift-card__category gift-card__category--green">FOR HEALTH</span>
+                <h3 class="gift-card__title">HYDRATION BOT</h3>
+              </div>
+            </button>
           </article>
 
           <article class="gift-card">
-            <img src="./assets/images/gift-for-work.png" alt="" class="gift-card__image" />
-            <div class="gift-card__content">
-              <span class="gift-card__category gift-card__category--purple">FOR WORK</span>
-              <h3 class="gift-card__title">MERGE MASTER</h3>
-            </div>
+            <button class="gift-card__button" type="button" aria-haspopup="dialog" aria-controls="gift-modal"
+              data-gift="merge-master">
+              <img src="./assets/images/gift-for-work.png" alt="Gift for work: Merge Master" class="gift-card__image" />
+              <div class="gift-card__content">
+                <span class="gift-card__category gift-card__category--purple">FOR WORK</span>
+                <h3 class="gift-card__title">MERGE MASTER</h3>
+              </div>
+            </button>
           </article>
 
           <article class="gift-card">
-            <img src="./assets/images/gift-for-harmony.png" alt="" class="gift-card__image" />
-            <div class="gift-card__content">
-              <span class="gift-card__category gift-card__category--pink">FOR HARMONY</span>
-              <h3 class="gift-card__title">SPONTANEOUS CODING PHILOSOPHER</h3>
-            </div>
+            <button class="gift-card__button" type="button" aria-haspopup="dialog" aria-controls="gift-modal"
+              data-gift="spontaneous-coding-phisopher">
+              <img src="./assets/images/gift-for-harmony.png" alt="Gift for harmony: Spontaneous Coding Philosopher" class="gift-card__image" />
+              <div class="gift-card__content">
+                <span class="gift-card__category gift-card__category--pink">FOR HARMONY</span>
+                <h3 class="gift-card__title">SPONTANEOUS CODING PHILOSOPHER</h3>
+              </div>
+            </button>
           </article>
 
         </div>
@@ -177,38 +194,39 @@
 
     <!-- CTA -->
     <section class="cta">
-      <div class="container cta__container">
+      <div class="container">
+        <div class="cta__container">
 
-        <h2 class="cta__title">
-          READY TO START YOUR JOURNEY TO A BETTER VERSION OF YOURSELF?
-        </h2>
+          <h2 class="cta__title">
+            READY TO START YOUR JOURNEY TO A BETTER VERSION OF YOURSELF?
+          </h2>
 
-        <a href="gifts.html" class="button cta__button">EXPLORE MAGICAL GIFTS</a>
+          <a href="gifts.html" class="button cta__button">EXPLORE MAGICAL GIFTS</a>
 
-        <p class="cta__note" id="expired">The New Year is Coming Soon...</p>
+          <p class="cta__note" id="expired">The New Year is Coming Soon...</p>
 
-        <div class="countdown cta__countdown">
-          <div class="countdown__item">
-            <span class="countdown__value" id="countdown-days">0</span>
-            <span class="countdown__label">DAYS</span>
-          </div>
-          <div class="countdown__divider"></div>
-          <div class="countdown__item">
-            <span class="countdown__value" id="countdown-hours">0</span>
-            <span class="countdown__label">HOURS</span>
-          </div>
-          <div class="countdown__divider"></div>
-          <div class="countdown__item">
-            <span class="countdown__value" id="countdown-minutes">0</span>
-            <span class="countdown__label">MINUTES</span>
-          </div>
-          <div class="countdown__divider"></div>
-          <div class="countdown__item">
-            <span class="countdown__value" id="countdown-seconds">0</span>
-            <span class="countdown__label">SECONDS</span>
+          <div class="countdown cta__countdown">
+            <div class="countdown__item">
+              <span class="countdown__value" id="countdown-days">47</span>
+              <span class="countdown__label">DAYS</span>
+            </div>
+            <div class="countdown__divider"></div>
+            <div class="countdown__item">
+              <span class="countdown__value" id="countdown-hours">5</span>
+              <span class="countdown__label">HOURS</span>
+            </div>
+            <div class="countdown__divider"></div>
+            <div class="countdown__item">
+              <span class="countdown__value" id="countdown-minutes">34</span>
+              <span class="countdown__label">MINUTES</span>
+            </div>
+            <div class="countdown__divider"></div>
+            <div class="countdown__item">
+              <span class="countdown__value" id="countdown-seconds">12</span>
+              <span class="countdown__label">SECONDS</span>
+            </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -218,7 +236,7 @@
   <footer class="footer" id="footer">
     <div class="container footer__container">
 
-      <div class="contacts footer__contacts">
+      <div class="footer__contacts">
 
         <a href="tel:+375291112233" class="contact-card">
           <img src="./assets/images/santa-claus.png" alt="" class="contact-card__icon" />
@@ -226,7 +244,7 @@
           <span class="contact-card__label">CALL US</span>
         </a>
 
-        <a href="#" class="contact-card">
+        <a href="https://maps.app.goo.gl/XmhVyZSKtxiTYoj46" class="contact-card" target="_blank">
           <img src="./assets/images/christmas-tree.png" alt="" class="contact-card__icon" />
           <span class="contact-card__value">MAGIC FOREST</span>
           <span class="contact-card__label">MEET US</span>
@@ -239,12 +257,45 @@
         </a>
 
       </div>
-
+      <div class="media">
+        <a href="#" class="media__item" aria-label="Telegram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 5L2 12.5L9 13.5M21 5L18.5 20L9 13.5M21 5L9 13.5M9 13.5V19L12.2488 15.7229" stroke="#181C29"
+              stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#" class="media__item" aria-label="Facebook">
+          <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 1H9C7.67392 1 6.40215 1.52678 5.46447 2.46447C4.52678 3.40215 4 4.67392 4 6V9H1V13H4V21H8V13H11L12 9H8V6C8 5.73478 8.10536 5.48043 8.29289 5.29289C8.48043 5.10536 8.73478 5 9 5H12V1Z"
+              stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#" class="media__item" aria-label="Instagram">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+              stroke="#181C29" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path
+              d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z"
+              stroke="#181C29" stroke-width="1.5" />
+            <path d="M17.5 6.51L17.51 6.49889" stroke="#181C29" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+        <a href="#" class="media__item" aria-label="Twitter">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M16.8198 20.7684L3.75317 3.96836C3.44664 3.57425 3.72749 3 4.22678 3H6.70655C6.8917 3 7.06649 3.08548 7.18016 3.23164L20.2468 20.0316C20.5534 20.4258 20.2725 21 19.7732 21H17.2935C17.1083 21 16.9335 20.9145 16.8198 20.7684Z"
+              stroke="#181C29" stroke-width="1.5" />
+            <path d="M20 3L4 21" stroke="#181C29" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </a>
+      </div>
       <p class="footer__copyright">
         © Copyright 2025, All Rights Reserved
       </p>
-
-      <a href="https://rs.school/" class="footer__link">
+      <a href="https://rs.school/" class="footer__link" target="_blank">
         Made in Rolling Scopes School
       </a>
 

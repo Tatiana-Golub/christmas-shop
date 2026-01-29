@@ -1,0 +1,86 @@
+:root {
+  --color-primary: #FF4646;
+  --color-primary-10: #FF46461A;
+  --color-dark: #181C29;
+  --color-white: #FFFFFF;
+  --color-white-40: #ffffff66;
+  --color-white-20: #ffffff33;
+  --color-purple: #4361FF;
+  --color-pink: #FF43F7;
+  --color-green: #06A44F;
+  --color-bg-main: #ECF3F8;
+
+  --font-main: "Montserrat", sans-serif;
+  --font-decor: "Allura", cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-white);
+}
+
+h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+  font-size: clamp(1.75rem, 1.2rem + 1.5vw, 2rem);
+  margin: 0;
+}
+
+h2 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  line-height: 1.52;
+  font-size: clamp(1.375rem, 1rem + 1vw, 1.5rem);
+  margin: 0;
+}
+
+h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.52;
+  font-size: clamp(0.875rem, 0.75rem + 0.6vw, 1rem);
+  margin: 0;
+}
+
+h4 {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+  font-size: clamp(0.75rem, 0.7rem + 0.3vw, 0.75rem);
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.48;
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
