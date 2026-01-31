@@ -2,7 +2,7 @@
   .about__container {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .about__content {
     padding-inline: 60px;
     padding-block: 46px;
@@ -14,6 +14,15 @@
 
   .gifts__list {
     grid-template-columns: repeat(2, 310px);
+  }
+
+  .gifts-menu {
+    max-width: 474px;
+    margin-bottom: 20px;
+  }
+
+  .gifts__title {
+    max-width: 426px;
   }
 
   .cta__container {
@@ -41,7 +50,7 @@
   .footer__container {
     padding-inline: 82px;
   }
-  
+
   .footer__contacts {
     flex-direction: row;
   }
