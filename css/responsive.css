@@ -28,6 +28,10 @@
   .cta__container {
     max-width: 426px;
   }
+
+  .scroll-top {
+    display: none;
+  }
 }
 
 @media (min-width: 1024px) {
