@@ -1,4 +1,27 @@
 @media (min-width: 768px) {
+  .lock {
+    overflow: auto;
+  } 
+
+  .header__nav {
+    position: static;
+    transform: none;
+    height: auto;
+    width: auto;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 0.75rem;
+  }
+
+  .burger {
+    display: none;
+  }
+
   .about__container {
     grid-template-columns: 1fr 1fr;
   }
