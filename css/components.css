@@ -156,6 +156,7 @@
 .gift-card__title {
   color: var(--color-dark);
   margin-top: 7px;
+  text-transform: uppercase;
 }
 
 .gift-card__category {
@@ -163,6 +164,7 @@
   font-weight: 600;
   line-height: 1.3rem;
   letter-spacing: 0.05rem;
+  text-transform: uppercase;
 }
 
 .gift-card__category--purple {
@@ -568,6 +570,7 @@
   padding-inline: 20px;
 }
 
-.gifts-menu__item:hover {
+.gifts-menu__item:hover,
+.gifts-menu__item--active {
   background-color: var(--color-white-20);
 }
