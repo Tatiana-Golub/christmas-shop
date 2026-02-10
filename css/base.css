@@ -9,6 +9,7 @@
   --color-pink: #FF43F7;
   --color-green: #06A44F;
   --color-bg-main: #ECF3F8;
+  --color-overlay: #181C29;
 
   --font-main: "Montserrat", sans-serif;
   --font-decor: "Allura", cursive;
@@ -22,6 +23,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
 }
 
 body {

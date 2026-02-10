@@ -1,3 +1,7 @@
+import { openGiftModal } from "./giftModal.js";
+import { getCategoryClass } from "../../utils/getCategoryClass.js";
+import { getGiftImage } from "../../utils/getGiftImage.js";
+
 export function createGiftCard(gift) {
   const article = document.createElement('article');
   article.className = 'gift-card';
@@ -7,7 +11,10 @@ export function createGiftCard(gift) {
   button.type = 'button';
   button.setAttribute('aria-haspopup', 'dialog');
   button.setAttribute('aria-controls', 'gift-modal');
-  button.dataset.gift = createDatasetName(gift.name);
+
+  button.addEventListener('click', () => {
+    openGiftModal(gift);
+  });
 
   const img = document.createElement('img');
   img.className = 'gift-card__image';
@@ -30,37 +37,4 @@ export function createGiftCard(gift) {
   article.append(button);
 
   return article;
-}
-
-function getGiftImage(category) {
-  switch (category) {
-    case 'For Work':
-      return './assets/images/gift-for-work.png';
-    case 'For Health':
-      return './assets/images/gift-for-health.png';
-    case 'For Harmony':
-      return './assets/images/gift-for-harmony.png';
-    default:
-      return '';
-  }
-}
-
-function getCategoryClass(category) {
-  switch (category) {
-    case 'For Work':
-      return 'gift-card__category--purple';
-    case 'For Health':
-      return 'gift-card__category--green';
-    case 'For Harmony':
-      return 'gift-card__category--pink';
-    default:
-      return '';
-  }
-}
-
-function createDatasetName(text) {
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-');
 }
